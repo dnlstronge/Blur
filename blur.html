@@ -5,18 +5,29 @@
         <title>Blur</title> 
         <style> body { margin: 20px; } </style>
         <script>
-    
-        window.onload = init;
-        function init() {
-            var image = document.getElementById("zero");
-            image.onclick = showAnswer;
-        }
-        function showAnswer() {
-            var image = document.getElementById("zero")
-            image.src = "files/zero.jpg";
-        }
+    window.onload = init;
+
+function init() {
+    var images = document.getElementsByTagName("img");
+    for (var i = 0; i < images.length; i++) {
+        images[i].onclick = showAnswer;
+    }
+};
+
+function showAnswer(e) {
+    var image = e.target;
+    var name = image.id;
+    name = name + ".jpg";
+    image.src = name;
+}
+
         </script>
     </head>
-<body> <img id="zero" src="files/zeroblur.jpg"> </body>
+<body> <img id="zero" src="zeroblur.jpg"> </body>
+       <img id="one" src="oneblur.jpg"> </body>
+       <img id="two" src="twoblur.jpg"> </body>
+       <img id="three" src="threeblur.jpg"> </body> 
+       <img id="four" src="fourblur.jpg"> </body>
+       <img id="five" src="fiveblur.jpg"> </body>
 </html>
 <head></head>
