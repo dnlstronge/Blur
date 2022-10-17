@@ -4,8 +4,19 @@
         <meta charset="utf-8">
         <title>Blur</title> 
         <style> body { margin: 20px; } </style>
-        <script> </script>
+        <script>
+    
+        window.onload = init;
+        function init() {
+            var image = document.getElementById("zero");
+            image.onclick = showAnswer;
+        }
+        function showAnswer() {
+            var image = document.getElementById("zero")
+            image.src = "files/zero.jpg";
+        }
+        </script>
     </head>
-<body> <img id="zero" src="/files/zeroblur.jpg"> </body>
+<body> <img id="zero" src="files/zeroblur.jpg"> </body>
 </html>
 <head></head>
